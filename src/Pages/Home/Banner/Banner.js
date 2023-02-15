@@ -1,22 +1,44 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import img from '../../../Images/try1.jpg'
+import React from "react";
+import Card from "react-bootstrap/Card";
+import img from "../../../Images/try1.jpg";
+import './Banner.css'
+import { FaArrowLeft } from "react-icons/fa";
 
 const Banner = () => {
-    return (
-        <div className=''>
-            <Card className=" text-white position-relative">
-                <Card.Img className='img-fluid' src={img} alt="Card image" />
-                <Card.ImgOverlay className='container position-absolute top-50 start-0 '>
-                    <Card.Title className='fs-2  position-absolute bottom-50 start-0 fw-bolder '>Computer Engineer <br />
-                    <span className='fs-6'>142,785 Computer Engineers Follow this</span>
-                    </Card.Title>
-                    
+  return (
+    <div className="">
+      <Card className=" text-white position-relative">
+        <Card.Img className="img-fluid card-img"  src={img} alt="Card image" />
 
-                </Card.ImgOverlay>
-            </Card>
-        </div>
-    );
+        
+     
+        <button
+            type="button"
+            class="m-2 btn btn-outline-light 	d-block d-sm-none position-absolute top-0 end-0"
+          >
+            Join Group
+            
+          </button>
+
+        <button
+            type="button"
+            class="m-2 btn btn-outline-light 	d-block d-sm-none position-absolute top-0 start-0"
+          >
+            <FaArrowLeft></FaArrowLeft>
+            
+          </button>
+        <Card.ImgOverlay className="container position-absolute top-50 start-0 ">
+          
+          <h1 className="d-sm-position-absolute d-sm-bottom-50  d-lg-bottom-50 start-0 fw-bolder ">
+            Computer Engineer <br />
+            <span className="fs-6 fw-normal">
+              142,785 Computer Engineers Follow this
+            </span>
+          </h1>
+        </Card.ImgOverlay>
+      </Card>
+    </div>
+  );
 };
 
 export default Banner;
